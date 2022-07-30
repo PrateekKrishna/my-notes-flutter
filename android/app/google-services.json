@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453086973723",
+    "project_id": "mynotes-flutter-prateek",
+    "storage_bucket": "mynotes-flutter-prateek.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453086973723:android:8b2a8caa5090844e130dbe",
+        "android_client_info": {
+          "package_name": "com.prateek.mynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453086973723-apbq88n4qcrf15egn4nffjg02lgcj9gn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUbC8DBEsT6vsKsA9OjQ6vyAs2g6G2yhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453086973723-apbq88n4qcrf15egn4nffjg02lgcj9gn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
