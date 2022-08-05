@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:mynotes/constants/routes.dart';
 import '../utilities/show_error_dialog.dart';
 
-
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
 
@@ -33,7 +32,7 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login View'),
+        title: const Text('Login'),
       ),
       body: Column(
         children: [
@@ -60,10 +59,23 @@ class _LoginViewState extends State<LoginView> {
               try {
                 await FirebaseAuth.instance.signInWithEmailAndPassword(
                     email: email, password: password);
-                Navigator.of(context).pushNamedAndRemoveUntil(
+                final user = FirebaseAuth.instance.currentUser;
+                if(user?.emailVerified ?? false){
+                //If user email is verified
+                  Navigator.of(context).pushNamedAndRemoveUntil(
                   notesRoute,
                   (route) => false,
                 );
+                }
+                else {
+                  //If user emai is NOT verified
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                  verifyEmailRoute,
+                  (route) => false,
+                );
+                }
+                
+                
               } on FirebaseAuthException catch (e) {
                 if (e.code == 'user-not-found') {
                   await showErrorDialog(
@@ -81,12 +93,11 @@ class _LoginViewState extends State<LoginView> {
                     'Error: ${e.code}',
                   );
                 }
-              }
-              catch (e) {
+              } catch (e) {
                 await showErrorDialog(
-                    context,
-                    e.toString(),
-                  );
+                  context,
+                  e.toString(),
+                );
               }
             }),
             child: const Text('Login'),
@@ -105,4 +116,3 @@ class _LoginViewState extends State<LoginView> {
     );
   }
 }
-
