@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mynotes/constants/routes.dart';
-import 'package:mynotes/firebase_options.dart';
 import 'package:mynotes/services/auth/auth_services.dart';
 import 'package:mynotes/views/login_view.dart';
 import 'package:mynotes/views/notes_view.dart';
@@ -20,12 +19,13 @@ void main() {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
-        verifyEmailRoute: (context) => VerifyEmailView(),
+        verifyEmailRoute: (context) => const VerifyEmailView(),
       },
       debugShowCheckedModeBanner: false,
     ),
   );
 }
+
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
