@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mynotes/enums/menu_action.dart';
 import 'package:mynotes/services/auth/auth_services.dart';
-import 'package:mynotes/services/crud/notes.services.dart';
+import 'package:mynotes/services/crud/notes_services.dart';
 import 'package:mynotes/views/notes/notes_list_view.dart';
 import '../../constants/routes.dart';
 import '../../utilities/dialogs/logout_dialog.dart';

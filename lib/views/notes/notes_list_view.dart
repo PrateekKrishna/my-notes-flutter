@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:mynotes/services/crud/notes.services.dart';
+import 'package:mynotes/services/crud/notes_services.dart';
 
 import '../../utilities/dialogs/delete_dialog.dart';
 
